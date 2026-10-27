@@ -25,7 +25,54 @@ def actividad():
 
 while dinero > 0 and tiempo > 0 or tiempo > 0:
     actividad()
-    hacer = int(input("Elección: "))
+    opcion = int(input("Elección: "))
     
     match opcion:
-        case 
+        
+        case 1:
+            if dinero < 10 or tiempo < 2:
+                print("Actividad no elegible")
+            else:
+                print("Vas a ir al cine")
+                dinero -= 10
+                tiempo -= 2
+                print(f"Te quedan {dinero}€ y {tiempo} horas")
+
+        case 2:
+            if dinero < 30 or tiempo < 2:
+                print("Actividad no elegible")
+            else:
+                print("Vas a ir a comer")
+                dinero -= 30
+                tiempo -= 2
+                print(f"Te quedan {dinero}€ y {tiempo} horas")
+
+        case 3:
+            if dinero < 5 or tiempo < 1:
+                print("Actividad no elegible")
+            else:
+                print("Vas a ir al museo")
+                dinero -= 5
+                tiempo -= 1
+                print(f"Te quedan {dinero}€ y {tiempo} horas")
+
+        case 4:
+            if  tiempo < 1:
+                print("Actividad no elegible")
+            else:
+                print("Vas a ir a hacer deporte")
+                dinero -= 0
+                tiempo -= 1
+                print(f"Te quedan {dinero}€ y {tiempo} horas")
+
+        case 5:
+            if  tiempo < 3:
+                print("Actividad no elegible")
+            else:
+                print("Vas a quedarte en casa")
+                dinero -= 0
+                tiempo -= 3
+                print(f"Te quedan {dinero}€ y {tiempo} horas")
+
+        case _:
+            print("Actividad no disponible")
